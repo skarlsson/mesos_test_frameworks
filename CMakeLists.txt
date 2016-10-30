@@ -32,7 +32,10 @@ SET(CSI_LIBRARY_PATH
 	${MESOS_PATH}/build/3rdparty/glog-0.3.3/.libs
 	${MESOS_PATH}/build/3rdparty/libprocess/.libs
 	${MESOS_PATH}/build/3rdparty/libev-4.22/.libs
-	${MESOS_PATH}//build/3rdparty/protobuf-2.6.1/src/.libs
+	${MESOS_PATH}/build/3rdparty/protobuf-2.6.1/src/.libs
+	${MESOS_PATH}/build/3rdparty/leveldb-1.4
+	${MESOS_PATH}/build/3rdparty/zookeeper-3.4.8/src/c/.libs
+	${MESOS_PATH}/build/3rdparty/.libs
 	)
 set(LIBRARY_OUTPUT_PATH     ${CMAKE_SOURCE_DIR}/lib)
 SET(EXECUTABLE_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/bin)
@@ -87,7 +90,7 @@ SET(CSI_MESOS_CLIENT_LIBS ${CSI_BOOST_LIBS})
 endif()
 
 if(__LINUX__)
-set(CSI_MESOS_CLIENT_LIBS mesos_no_3rdparty  log java state glog protobuf process ev curl boost_date_time boost_timer boost_thread boost_system boost_program_options boost_filesystem boost_regex boost_chrono boost_iostreams sasl2 pthread dl z rt c)
+set(CSI_MESOS_CLIENT_LIBS mesos_no_3rdparty zookeeper_mt zkmt hashtable log java state glog protobuf process ev curl boost_date_time boost_timer boost_thread boost_system boost_program_options boost_filesystem boost_regex boost_chrono boost_iostreams sasl2 pthread dl z rt c)
 #SET(CSI_MESOS_CLIENT_LIBS curl crypto ssl ${CSI_BOOST_LIBS})
 endif()
 
