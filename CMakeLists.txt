@@ -10,6 +10,7 @@ ${MESOS_PATH}/include
 ${MESOS_PATH}/3rdparty/stout/include
 ${MESOS_PATH}/build/include
 ${MESOS_PATH}/build/3rdparty/protobuf-2.6.1/src
+${MESOS_PATH}/build/3rdparty/glog-0.3.3/src
 )
 
 if(WIN32)
