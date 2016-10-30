@@ -7,6 +7,7 @@ SET(MESOS_PATH ${CMAKE_SOURCE_DIR}/../mesos-1.0.1)
 
 SET(CSI_INCLUDE_PATH 
 ${MESOS_PATH}/include
+${MESOS_PATH}/build/3rdparty/protobuf-2.6.1/src
 )
 
 if(WIN32)
