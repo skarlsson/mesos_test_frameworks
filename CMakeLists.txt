@@ -31,7 +31,9 @@ SET(CSI_LIBRARY_PATH
 	${MESOS_PATH}/build/3rdparty/.libs
 	${MESOS_PATH}/build/3rdparty/glog-0.3.3/.libs
 	${MESOS_PATH}/build/3rdparty/libprocess/.libs
-	${MESOS_PATH}/build/3rdparty/libev-4.22/.libs)
+	${MESOS_PATH}/build/3rdparty/libev-4.22/.libs
+	${MESOS_PATH}//build/3rdparty/protobuf-2.6.1/src/.libs
+	)
 set(LIBRARY_OUTPUT_PATH     ${CMAKE_SOURCE_DIR}/lib)
 SET(EXECUTABLE_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/bin)
 endif() 
