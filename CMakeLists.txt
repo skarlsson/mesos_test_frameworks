@@ -13,6 +13,15 @@ ${MESOS_PATH}/build/3rdparty/protobuf-2.6.1/src
 ${MESOS_PATH}/build/3rdparty/glog-0.3.3/src
 )
 
+SET(CSI_LIBRARY_PATH        
+	${MESOS_PATH}/build/src/.libs
+	${MESOS_PATH}/build/3rdparty/.libs
+	${MESOS_PATH}/build/3rdparty/glog-0.3.3/.libs
+	${MESOS_PATH}/build/3rdparty/libprocess/.libs
+	${MESOS_PATH}/build/3rdparty/libev-4.22/.libs
+)
+
+
 if(WIN32)
 
 SET(CSI_INCLUDE_PATH ${CSI_INCLUDE_PATH}
@@ -82,7 +91,7 @@ SET(CSI_MESOS_CLIENT_LIBS ${CSI_BOOST_LIBS})
 endif()
 
 if(__LINUX__)
-set(CSI_MESOS_CLIENT_LIBS boost_date_time boost_timer boost_thread boost_system boost_program_options boost_filesystem boost_regex boost_chrono boost_iostreams pthread rt c)
+set(CSI_MESOS_CLIENT_LIBS mesos_no_3rdparty log java state glog protobuf boost_date_time boost_timer boost_thread boost_system boost_program_options boost_filesystem boost_regex boost_chrono boost_iostreams pthread rt c)
 #SET(CSI_MESOS_CLIENT_LIBS curl crypto ssl ${CSI_BOOST_LIBS})
 endif()
 
