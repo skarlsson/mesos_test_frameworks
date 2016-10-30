@@ -13,10 +13,7 @@ ${MESOS_PATH}/build/3rdparty/protobuf-2.6.1/src
 ${MESOS_PATH}/build/3rdparty/glog-0.3.3/src
 )
 
-
-
 if(WIN32)
-
 SET(CSI_INCLUDE_PATH ${CSI_INCLUDE_PATH}
 	${MESOS_PATH}/build/3rdparty/curl-7.43.0/src/curl-7.43.0/include
 	${CMAKE_SOURCE_DIR}/windows
@@ -34,11 +31,9 @@ SET(CSI_LIBRARY_PATH
 	${MESOS_PATH}/build/3rdparty/.libs
 	${MESOS_PATH}/build/3rdparty/glog-0.3.3/.libs
 	${MESOS_PATH}/build/3rdparty/libprocess/.libs
-	${MESOS_PATH}/build/3rdparty/libev-4.22/.libs
-)
+	${MESOS_PATH}/build/3rdparty/libev-4.22/.libs)
 set(LIBRARY_OUTPUT_PATH     ${CMAKE_SOURCE_DIR}/lib)
 SET(EXECUTABLE_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/bin)
-)
 endif() 
 
 #COMMON DEFINITIONS
