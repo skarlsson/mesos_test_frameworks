@@ -82,7 +82,7 @@ SET(CSI_MESOS_CLIENT_LIBS ${CSI_BOOST_LIBS})
 endif()
 
 if(__LINUX__)
-set(CSI_MESOS_CLIENT_LIBS ${BOOST_PATH}/stage/lib/libboost_log_setup.a ${BOOST_PATH}/stage/lib/libboost_log.a boost_date_time boost_timer boost_thread boost_system boost_program_options boost_filesystem boost_regex boost_chrono boost_iostreams pthread rt c)
+set(CSI_MESOS_CLIENT_LIBS boost_date_time boost_timer boost_thread boost_system boost_program_options boost_filesystem boost_regex boost_chrono boost_iostreams pthread rt c)
 #SET(CSI_MESOS_CLIENT_LIBS curl crypto ssl ${CSI_BOOST_LIBS})
 endif()
 
